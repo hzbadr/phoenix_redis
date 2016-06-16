@@ -36,5 +36,5 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 
 ## ab
-  * ab -n 20000 -c 1000 -p post.data http://saas-realtime-api.seeloz.com/api/redis
+  * ab -n 20000 -c 1000 -p post.data -T 'application/x-www-form-urlencoded' http://saas-realtime-api.seeloz.com/api/redis
   post.data is file which contains post params

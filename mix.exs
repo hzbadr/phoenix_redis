@@ -30,7 +30,7 @@ defmodule SaasRealtimeApi.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.1.4"},
      {:gettext, "~> 0.9"},
-     {:cowboy, git: "https://github.com/ninenines/cowboy", [override: true]},
+     {:cowboy, git: "https://github.com/ninenines/cowboy", override: true},
      {:exredis, ">= 0.2.4"},
      {:exrm, "~> 1.0.5"}]
   end

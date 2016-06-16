@@ -15,6 +15,6 @@ defmodule SaasRealtimeApi.RedisController do
 
   def create(conn, params) do
     Logger.debug params
-    json conn ${message: "error!"}
+    json conn, %{message: "error!"}
   end
 end

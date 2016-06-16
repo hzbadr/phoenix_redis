@@ -11,6 +11,7 @@ defmodule SaasRealtimeApi do
       supervisor(SaasRealtimeApi.Endpoint, []),
       # Here you could define other workers and supervisors as children
       # worker(SaasRealtimeApi.Worker, [arg1, arg2, arg3]),
+      worker(SaasRealtimeApi.RedisRepo, [:redis, "redis://localhost:6379/0"]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
@@ -24,5 +25,14 @@ defmodule SaasRealtimeApi do
   def config_change(changed, _new, removed) do
     SaasRealtimeApi.Endpoint.config_change(changed, removed)
     :ok
+  end
+end
+
+
+defmodule SaasRealtimeApi.RedisRepo do
+  def start_link(name, uri) do
+    client = Exredis.start_using_connection_string(uri)
+    true = Process.register(client, name)
+    {:ok, client}
   end
 end

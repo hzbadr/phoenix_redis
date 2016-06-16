@@ -7,7 +7,7 @@ defmodule SaasRealtimeApi.RedisController do
 
     client
     |> Exredis.query(["SET", key, value])
-    |> stop
+    |>  Exredis.stop
 
     json conn, %{ message: "success!"}
   end

@@ -36,8 +36,8 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 
 ## ab
-  * ab -n 20000 -c 1000 -p post.data -T 'application/x-www-form-urlencoded' http://example.com/api/v1/locations/
-  post.data is file which contains post params
+  * ab -k -n 10000 -c 300 -p post.data -T 'application/x-www-form-urlencoded' http://saas-realtime-api.seeloz.com/api/redis
+  * post.data is file which contains post params
 
 ## Redis max connection is 10000
   * ulimit -n 10000

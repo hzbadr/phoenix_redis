@@ -32,7 +32,7 @@ defmodule SaasRealtimeApi.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:exredis, ">= 0.2.4"},
-     {:exrm, "~> 1.0.5"}]
+     {:exrm, git: "bitwalker/exrm"}]
   end
 end
 

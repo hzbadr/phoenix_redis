@@ -29,3 +29,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 # Follow this article
   http://www.sobieck.com/2015/11/08/connecting-to-redis-in-a-phoenix-application/
+
+
+## Cenots
+  * http://www.jeramysingleton.com/install-erlang-and-elixir-on-centos-7-minimal/
+
+
+## ab
+  * ab -n 20000 -c 1000 -p post.data http://saas-realtime-api.seeloz.com/api/redis
+  post.data is file which contains post params

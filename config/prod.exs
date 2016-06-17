@@ -19,7 +19,7 @@ config :saas_realtime_api, SaasRealtimeApi.Endpoint,
   code_reloader: false
 
 # Do not print debug messages in production
-config :logger, level: :info
+config :logger, level: :debug
 
 # ## SSL Support
 #

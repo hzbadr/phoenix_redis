@@ -17,7 +17,8 @@ defmodule SaasRealtimeApi.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {SaasRealtimeApi, []},
-     applications: [:phoenix, :cowboy, :logger, :gettext, :exredis]]
+     applications: [:phoenix, :cowboy, :logger, :gettext,
+                    :exredis, :redis_poolex, :poolboy]]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,7 +33,9 @@ defmodule SaasRealtimeApi.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:exredis, ">= 0.2.4"},
-     {:exrm, git: "https://github.com/bitwalker/exrm"}]
+     {:exrm, git: "https://github.com/bitwalker/exrm"},
+     {:redis_poolex, "~> 0.0.2"},
+     {:poolboy, "~> 1.5"}]
   end
 end
 

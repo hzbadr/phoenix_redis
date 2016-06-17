@@ -3,7 +3,7 @@ defmodule SaasRealtimeApi.RedisController do
 
 
   def create(conn, %{"key" => key, "value" => value}) do
-    Exredis.query(:redis, ["SET", key, value])
+    RedisPoolex.query(["SET", key, value])
 
     json conn, %{ message: "success!"}
   end

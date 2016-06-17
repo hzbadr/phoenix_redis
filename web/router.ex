@@ -7,10 +7,6 @@ defmodule SaasRealtimeApi.Router do
 
   scope "/api", SaasRealtimeApi do
     pipe_through :api
-  end
-
-  scope "/api", SaasRealtimeApi do
-    pipe_through :api
 
     resources "/redis", RedisController
   end

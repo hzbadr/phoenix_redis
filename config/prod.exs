@@ -80,5 +80,5 @@ config :redis_poolex,
   db: 0,
   reconnect: :no_reconnect,
   max_queue: :infinity,
-  pool_size: 10,
-  pool_max_overflow: 1
+  pool_size: 100,
+  pool_max_overflow: 50

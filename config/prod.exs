@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :saas_realtime_api, SaasRealtimeApi.Endpoint,
   http: [port: 4001],
-  url: [host: "saas-realtime-api.seeloz.com", port: 80],
+  url: [host: "saas-realtime-api.seeloz.com", port: 4001],
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
   code_reloader: false
